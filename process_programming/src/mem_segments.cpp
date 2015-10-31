@@ -26,14 +26,14 @@ square(int x) /*Allocated in frame for square*/ {
 
 int main(int argc, char** argv) { /*Allocated in frame for main*/
 	static int key = 100; /*Initialized data segment*/
-	
+
 	static char mbuf[200]; /*Uninitialized data segment*/
-	
+
 	char *p; /*Allocated in frame for main*/
 
-	p = malloc(1024); /*Points to memory in heap segments*/
+	p = (char*) malloc(1024); /*Points to memory in heap segments*/
 	free(p);
-	
+
 	return 0;
 }
 

@@ -34,7 +34,8 @@ include Makefile
 OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
-OBJECTFILES=
+OBJECTFILES= \
+	${OBJECTDIR}/src/mem_segments.o
 
 
 # C Compiler Flags
@@ -55,11 +56,16 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/process_programming
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ../bin/process_programming
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/process_programming: ${OBJECTFILES}
-	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/process_programming ${OBJECTFILES} ${LDLIBSOPTIONS}
+../bin/process_programming: ${OBJECTFILES}
+	${MKDIR} -p ../bin
+	${LINK.cc} -o ../bin/process_programming ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/src/mem_segments.o: src/mem_segments.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/mem_segments.o src/mem_segments.cpp
 
 # Subprojects
 .build-subprojects:
@@ -67,7 +73,7 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/process_programming: ${OBJECTFILES}
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/process_programming
+	${RM} ../bin/process_programming
 
 # Subprojects
 .clean-subprojects:

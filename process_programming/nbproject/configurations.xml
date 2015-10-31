@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="95">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="inc" displayName="inc" projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="src" displayName="src" projectFiles="true">
+      <itemPath>src/mem_segments.cpp</itemPath>
+    </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
                    projectFiles="false"
@@ -13,6 +18,10 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>inc</Elem>
+    <Elem>src</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="1">
@@ -22,7 +31,12 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <linkerTool>
+          <output>../bin/process_programming</output>
+        </linkerTool>
       </compileType>
+      <item path="src/mem_segments.cpp" ex="false" tool="1" flavor2="0">
+      </item>
     </conf>
     <conf name="Release" type="1">
       <toolsSet>
@@ -44,6 +58,8 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="src/mem_segments.cpp" ex="false" tool="1" flavor2="0">
+      </item>
     </conf>
   </confs>
 </configurationDescriptor>
