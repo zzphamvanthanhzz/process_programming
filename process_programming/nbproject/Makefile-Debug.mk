@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/src/argc_argv_envron.o \
 	${OBJECTDIR}/src/mem_segments.o
 
 
@@ -61,6 +62,11 @@ LDLIBSOPTIONS=
 ../bin/process_programming: ${OBJECTFILES}
 	${MKDIR} -p ../bin
 	${LINK.cc} -o ../bin/process_programming ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/src/argc_argv_envron.o: src/argc_argv_envron.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/argc_argv_envron.o src/argc_argv_envron.cpp
 
 ${OBJECTDIR}/src/mem_segments.o: src/mem_segments.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src

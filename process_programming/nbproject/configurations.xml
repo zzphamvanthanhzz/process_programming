@@ -4,6 +4,7 @@
     <logicalFolder name="inc" displayName="inc" projectFiles="true">
     </logicalFolder>
     <logicalFolder name="src" displayName="src" projectFiles="true">
+      <itemPath>src/argc_argv_envron.cpp</itemPath>
       <itemPath>src/mem_segments.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -35,6 +36,8 @@
           <output>../bin/process_programming</output>
         </linkerTool>
       </compileType>
+      <item path="src/argc_argv_envron.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="src/mem_segments.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
@@ -58,6 +61,8 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="src/argc_argv_envron.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="src/mem_segments.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
