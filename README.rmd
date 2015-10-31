@@ -1,0 +1,6 @@
+*pid_t getpid(void);
+always successful, returns process ID of the caller.
+*pid_t getppid(void);
+always successfully, returns process ID of parent of caller.
+If a process becomes orphaned because its parents terminates, then the child is adopted by the init process. And subsequent calls to get_ppid will
+return 1.
