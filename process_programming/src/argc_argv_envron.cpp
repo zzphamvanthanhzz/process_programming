@@ -13,7 +13,7 @@ using namespace std;
 /*
  * 
  */
-int main(int argc, char** argv) {
+int main_argc_argvs_environ(int argc, char** argv) {
 	printf("Number of argument is: %d\n", argc);
 	char** p;
 	for (p = argv; *p != NULL; p++) {

@@ -5,6 +5,7 @@
     </logicalFolder>
     <logicalFolder name="src" displayName="src" projectFiles="true">
       <itemPath>src/argc_argv_envron.cpp</itemPath>
+      <itemPath>src/malloc_free_program_break.cpp</itemPath>
       <itemPath>src/mem_segments.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -38,6 +39,8 @@
       </compileType>
       <item path="src/argc_argv_envron.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="src/malloc_free_program_break.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="src/mem_segments.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
@@ -62,6 +65,8 @@
         </asmTool>
       </compileType>
       <item path="src/argc_argv_envron.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/malloc_free_program_break.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/mem_segments.cpp" ex="false" tool="1" flavor2="0">
       </item>

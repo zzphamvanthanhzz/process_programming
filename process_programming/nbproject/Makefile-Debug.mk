@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/src/argc_argv_envron.o \
+	${OBJECTDIR}/src/malloc_free_program_break.o \
 	${OBJECTDIR}/src/mem_segments.o
 
 
@@ -67,6 +68,11 @@ ${OBJECTDIR}/src/argc_argv_envron.o: src/argc_argv_envron.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/argc_argv_envron.o src/argc_argv_envron.cpp
+
+${OBJECTDIR}/src/malloc_free_program_break.o: src/malloc_free_program_break.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/malloc_free_program_break.o src/malloc_free_program_break.cpp
 
 ${OBJECTDIR}/src/mem_segments.o: src/mem_segments.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
